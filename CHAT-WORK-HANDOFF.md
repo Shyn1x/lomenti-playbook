@@ -30,3 +30,13 @@ For Эрик, supply paths, copy/paste-safe code or diff, sequence of changes, b
 - A Playbook repository does not automatically impose rules on other repositories or ChatGPT Sites projects.
 - To enable for a site, pin a specific Playbook commit, copy this document with the Playbook snapshot, and reference it from that site's root AGENTS.md / PROJECT.md, preserving existing project instructions.
 - Documentation changes do not authorize any live site edits. Test the process first on a non-production demo change, with explicit approval before publishing.
+
+## Continuous improvement: approved, non-duplicative recipes
+
+1. Start with the pinned Playbook and its existing component patterns. Before proposing a new reusable pattern, check DESIGN.md, MOTION-INTERACTIONS.md, LESSONS.md and any existing recipe library for an equivalent.
+2. If the requested pattern already exists, reuse it. If the agent overlooked it, record the reason for the miss and improve discoverability rather than duplicate the rule.
+3. If the pattern is genuinely new, implement it for the current site within the approved scope, validate behavior, performance, accessibility, reduced-motion behavior, mobile and brand fit, and ask the operator whether the result is satisfactory.
+4. Only after the operator accepts the result, optionally ask whether to add it to the shared Playbook. Ask only for materially reusable new solutions or important lessons, not every minor edit. Acceptance of the site change is **not** approval to modify the Playbook.
+5. With explicit permission to add, document the recipe's purpose, when to use/avoid, dependencies, reusable source/patch, configuration, verification steps, provenance and tested projects. Do not add client-specific assets, secrets or unlicensed code.
+6. Keep recipes optional and context-sensitive; reserve mandatory rules for broadly applicable quality/safety standards. Version the Playbook and use a reviewable PR. Existing site snapshots are not silently updated.
+7. For a rejected result, first clarify what failed and fix the current site. Record a generalized failure lesson only when genuinely valuable and separately approved.
